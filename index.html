@@ -918,6 +918,21 @@
   }
   .back-link:hover{ color:var(--seal); }
 
+  /* ---------- Professores ---------- */
+  .faculty{ display:grid; grid-template-columns:repeat(2, 1fr); gap:1px; background:var(--rule-dark); border:1px solid var(--rule-dark); }
+  @media (max-width:860px){ .faculty{ grid-template-columns:1fr; } }
+  .prof{ background:var(--cream); display:grid; grid-template-columns:150px 1fr; gap:26px; padding:30px 28px; transition:background 0.25s ease; }
+  .prof:hover{ background:var(--cream-light); }
+  @media (max-width:520px){ .prof{ grid-template-columns:1fr; } }
+  .prof-photo{ width:150px; height:180px; object-fit:cover; display:block; border:1px solid var(--rule-dark); background:#E9DFC9; filter:grayscale(0.15); transition:filter 0.3s ease, transform 0.3s ease; }
+  .prof:hover .prof-photo{ filter:none; transform:translateY(-2px); }
+  .prof-area{ font-family:var(--utility); font-size:11.5px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--seal); margin-bottom:8px; display:block; }
+  .prof h3{ font-family:var(--display); font-weight:600; font-size:1.25rem; line-height:1.25; color:var(--navy); margin-bottom:4px; }
+  .prof-title{ font-family:var(--utility); font-size:13px; color:var(--stone); margin-bottom:12px; }
+  .prof p.bio{ font-size:15.5px; line-height:1.55; color:var(--navy); margin-bottom:12px; }
+  .prof-courses{ font-family:var(--utility); font-size:12.5px; line-height:1.55; color:var(--stone); border-top:1px solid var(--rule); padding-top:10px; }
+  .prof-courses strong{ color:var(--navy); font-weight:600; }
+
   /* ---------- Page-section visibility (single-page nav) ---------- */
   .page{ display:none; }
   .page.active{ display:block; }
@@ -949,6 +964,7 @@
   @media(max-width:560px) { .wrap { padding-inline:22px; } .year-head { gap:12px; } .year-num { font-size:2rem; } }
 
 </style>
+<script>window.PROF_PH = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 360'><rect width='300' height='360' fill='%23E9DFC9'/><circle cx='150' cy='138' r='58' fill='%23010729' opacity='0.85'/><path d='M40 360c6-78 52-124 110-124s104 46 110 124z' fill='%23010729' opacity='0.85'/><rect x='14' y='14' width='272' height='332' fill='none' stroke='%23B8923E' stroke-width='2'/></svg>";</script>
 </head>
 <body>
 
@@ -964,6 +980,7 @@
         <li><a href="#" onclick="goTo('home');return false;">Início</a></li>
         <li><a href="#" onclick="goTo('sobre');return false;">Sobre</a></li>
         <li><a href="#" onclick="goTo('curriculo');return false;">Currículo</a></li>
+        <li><a href="#" onclick="goTo('professores');return false;">Professores</a></li>
         <li><a href="#" onclick="goTo('contato');return false;">Contato</a></li>
       </ul>
     </nav>
@@ -1384,6 +1401,67 @@
 
 </main>
 
+<!-- ============ PROFESSORES ============ -->
+<main id="page-professores" class="page">
+
+  <section style="padding-top:64px;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Corpo Docente</span>
+        <h2 class="section-title">Professores a serviço da Igreja.</h2>
+        <p>Pastores e estudiosos comprometidos com as Escrituras e com os Padrões de Westminster, cada um responsável por uma área da formação.</p>
+      </div>
+      <div class="faculty">
+        <!-- Professor 1: para trocar a foto, envie o arquivo fotos/professor-1.jpg -->
+        <article class="prof">
+          <img class="prof-photo" src="fotos/professor-1.jpg" alt="Foto de Rev. Dr. Paulo Henrique Valadares" onerror="this.onerror=null;this.src=window.PROF_PH;">
+          <div>
+            <span class="prof-area">Antigo Testamento e Hebraico Bíblico</span>
+            <h3>Rev. Dr. Paulo Henrique Valadares</h3>
+            <p class="prof-title">Doutor em Antigo Testamento</p>
+            <p class="bio">Pastor presbiteriano e estudioso do texto hebraico, com pesquisa dedicada ao Pentateuco, aos Profetas e à literatura sapiencial.</p>
+            <p class="prof-courses"><strong>Leciona:</strong> Hebraico Bíblico I–IV · Panorama do Antigo Testamento · Exegese do Antigo Testamento I e II</p>
+          </div>
+        </article>
+        <!-- Professor 2: para trocar a foto, envie o arquivo fotos/professor-2.jpg -->
+        <article class="prof">
+          <img class="prof-photo" src="fotos/professor-2.jpg" alt="Foto de Rev. Dr. André Luiz Moraes Teixeira" onerror="this.onerror=null;this.src=window.PROF_PH;">
+          <div>
+            <span class="prof-area">Novo Testamento e Grego Bíblico</span>
+            <h3>Rev. Dr. André Luiz Moraes Teixeira</h3>
+            <p class="prof-title">Doutor em Novo Testamento</p>
+            <p class="bio">Dedica-se à sintaxe do grego koiné e à leitura dos Evangelhos e das epístolas no contexto da história da redenção.</p>
+            <p class="prof-courses"><strong>Leciona:</strong> Grego Bíblico I–IV · Panorama do Novo Testamento · Hermenêutica Bíblica · Exegese do Novo Testamento I e II</p>
+          </div>
+        </article>
+        <!-- Professor 3: para trocar a foto, envie o arquivo fotos/professor-3.jpg -->
+        <article class="prof">
+          <img class="prof-photo" src="fotos/professor-3.jpg" alt="Foto de Prof. Dr. Ricardo Albuquerque Siqueira" onerror="this.onerror=null;this.src=window.PROF_PH;">
+          <div>
+            <span class="prof-area">Teologia Sistemática e Confessionalidade</span>
+            <h3>Prof. Dr. Ricardo Albuquerque Siqueira</h3>
+            <p class="prof-title">Doutor em Teologia Sistemática</p>
+            <p class="bio">Pesquisador da ortodoxia reformada clássica e dos Padrões de Westminster, com ênfase na doutrina de Deus e na teologia do pacto.</p>
+            <p class="prof-courses"><strong>Leciona:</strong> Teologia Sistemática I–VI · Confessionalidade Escocesa · Constituição Presbiteriana I–IV · Latim I–IV</p>
+          </div>
+        </article>
+        <!-- Professor 4: para trocar a foto, envie o arquivo fotos/professor-4.jpg -->
+        <article class="prof">
+          <img class="prof-photo" src="fotos/professor-4.jpg" alt="Foto de Rev. Me. Samuel Rezende Prado" onerror="this.onerror=null;this.src=window.PROF_PH;">
+          <div>
+            <span class="prof-area">História da Igreja e Ministério Pastoral</span>
+            <h3>Rev. Me. Samuel Rezende Prado</h3>
+            <p class="prof-title">Mestre em História da Igreja</p>
+            <p class="bio">Pastor há mais de vinte anos, estuda a Reforma Escocesa e os Covenanters e orienta a pregação expositiva e o cuidado do rebanho.</p>
+            <p class="prof-courses"><strong>Leciona:</strong> História da Igreja I–IV · Teologia dos Covenants · Homilética I–III · Teologia Pastoral I e II</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <!-- ============ CONTATO ============ -->
 <main id="page-contato" class="page">
 
@@ -1562,6 +1640,7 @@
           <li><a href="#" class="flink" onclick="goTo('home');return false;">Início</a></li>
           <li><a href="#" class="flink" onclick="goTo('sobre');return false;">Sobre o Seminário</a></li>
           <li><a href="#" class="flink" onclick="goTo('curriculo');return false;">Grade Curricular</a></li>
+          <li><a href="#" class="flink" onclick="goTo('professores');return false;">Corpo Docente</a></li>
           <li><a href="#" class="flink" onclick="goTo('contato');return false;">Contato</a></li>
         </ul>
       </div>
